@@ -1,0 +1,94 @@
+
+<div class="quote-card">
+   <div class="quote-text" id="quoteText" onmousedown="handleMouseDown(event)"></div>
+   <div class="quote-author" id="quoteAuthor"></div>
+</div>
+
+<style>
+   .quote-card {
+       background: #ffffff;
+       border-radius: 15px;
+       padding: 35px;
+       width: 360px;
+       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+       text-align: center;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+       margin: 20px auto;
+   }
+   .quote-card:hover {
+       transform: translateY(-8px);
+       box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+   }
+   .quote-text {
+       font-size: 19px;
+       margin-bottom: 20px;
+       cursor: pointer;
+       line-height: 1.6;
+       transition: color 0.3s ease;
+       font-family: 'Segoe UI', Arial, sans-serif;
+   }
+   .quote-author {
+       font-size: 15px;
+       font-style: italic;
+       transition: color 0.3s ease;
+       font-family: 'Segoe UI', Arial, sans-serif;
+   }
+</style>
+
+<script>
+   const quotes = [
+       { text: "知人者智，自知者明。", author: "老子" },
+       { text: "学而不思则罔，思而不学则殆。", author: "孔子" },
+       { text: "人法地，地法天，天法道，道法自然。", author: "老子" },
+       { text: "己所不欲，勿施于人。", author: "孔子" },
+       { text: "道可道，非常道；名可名，非常名。", author: "老子" },
+       { text: "天下皆知美之为美，斯恶已。", author: "老子" },
+       { text: "君子喻于义，小人喻于利。", author: "孔子" },
+       { text: "无为而治。", author: "老子" },
+       { text: "仁者爱人。", author: "孟子" },
+       { text: "三军可夺帅也，匹夫不可夺志也。", author: "孔子" },
+       { text: "有朋自远方来，不亦乐乎？", author: "孔子" },
+       { text: "祸兮福之所倚，福兮祸之所伏。", author: "老子" },
+       { text: "性相近也，习相远也。", author: "孔子" },
+       { text: "民为贵，社稷次之，君为轻。", author: "孟子" },
+       { text: "知足常乐。", author: "老子" }
+   ];
+
+   const colors = [
+       '#2c3e50', '#34495e', '#7f8c8d', '#16a085', '#27ae60',
+       '#2980b9', '#8e44ad', '#c0392b', '#d35400', '#f39c12'
+   ];
+
+   function getRandomColor() {
+       return colors[Math.floor(Math.random() * colors.length)];
+   }
+
+   function refreshQuote() {
+       const randomIndex = Math.floor(Math.random() * quotes.length);
+       const quote = quotes[randomIndex];
+       const color = getRandomColor();
+       document.getElementById('quoteText').textContent = quote.text;
+       document.getElementById('quoteText').style.color = color;
+       document.getElementById('quoteAuthor').textContent = "— " + quote.author;
+       document.getElementById('quoteAuthor').style.color = color;
+   }
+
+   function handleMouseDown(event) {
+       if (event.button === 0) { // Left click
+           refreshQuote();
+       } else if (event.button === 2) { // Right click
+           event.preventDefault();
+           const text = document.getElementById('quoteText').textContent + ' — ' + document.getElementById('quoteAuthor').textContent;
+           navigator.clipboard.writeText(text).then(() => {
+               alert('名言已复制到剪贴板！');
+           });
+       }
+   }
+
+   // Prevent default context menu
+   document.getElementById('quoteText').addEventListener('contextmenu', (e) => e.preventDefault());
+
+   // Initial quote
+   refreshQuote();
+</script>
+
