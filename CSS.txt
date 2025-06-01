@@ -1,0 +1,131 @@
+.PostUser-name a[href*='/u/_luogu_huowenshuo_']::after {
+  margin: 0 auto;
+  content: "站长";
+  font-size: 90%;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-radius: 5px !important;
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(135deg, #fc4749, #fcce35, #4cc151, #1d90eb, #b81deb) !important;
+  white-space: nowrap;
+  margin-left: 3px;
+}
+
+
+
+.PostUser-name a[href="/u/return_second"] .username::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSIjNWViOTVlIiBzdHlsZT0ibWFyZ2luLWJvdHRvbTogLTNweDsiPjxwYXRoIGQ9Ik0xNiA4QzE2IDYuODQzNzUgMTUuMjUgNS44NDM3NSAxNC4xODc1IDUuNDM3NUMxNC42NTYyIDQuNDM3NSAxNC40Njg4IDMuMTg3NSAxMy42NTYyIDIuMzQzNzVDMTIuODEyNSAxLjUzMTI1IDExLjU2MjUgMS4zNDM3NSAxMC41NjI1IDEuODEyNUMxMC4xNTYyIDAuNzUgOS4xNTYyIDAgOCAwQzYuODEyNSAwIDUuODEyNSAwLjc1IDUuNDA2MjUgMS44MTI1QzQuNDA2MjUgMS4zNDM3NSAzLjE1NjI1IDEuNTMxMjUgMi4zNDM3NSAyLjM0Mzc1QzEuNSAzLjE4NzUgMS4zMTI1IDQuNDM3NSAxLjc4MTI1IDUuNDM3NUMwLjcxODc1IDUuODQzNzUgMCA2Ljg0Mzc1IDAgOEMwIDkuMTg3NSAwLjcxODc1IDEwLjE4NzUgMS43ODEyNSAxMC41OTM4QzEuMzEyNSAxMS41OTM4IDEuNSAxMi44NDM4IDIuMzQzNzUgMTMuNjU2MkMzLjE1NjI1IDE0LjUgNC40MDYyNSAxNC42ODc1IDUuNDA2MjUgMTQuMjE4OEM1LjgxMjUgMTUuMjgxMiA2LjgxMjUgMTYgOCAxNkM5LjE1NjI1IDE2IDEwLjE1NjIgMTUuMjgxMiAxMC41NjI1IDE0LjIxODhDMTEuNTkzOCAxNC42ODc1IDEyLjgxMjUgMTQuNSAxMy42NTYyIDEzLjY1NjJDMTQuNDY4OCAxMi44NDM4IDE0LjY1NjIgMTEuNTkzOCAxNC4xODc1IDEwLjU5MzhDMTUuMjUgMTAuMTg3NSAxNiA5LjE4NzUgMTYgOFpNMTEuNDY4OCA2LjYyNUw3LjM3NSAxMC42ODc1QzcuMjE4OCAxMC44NDM4IDcgMTAuODEyNSA2Ljg3NSAxMC42ODc1TDQuNSA4LjMxMjVDNC4zNzUgOC4xODc1IDQuMzc1IDcuOTY4OCA0LjUgNy44MTI1TDUuMzEyNSA3QzUuNDY4OCA2Ljg3NSA1LjY4NzUgNi44NzUgNS44MTI1IDcuMDMxMjVMNy4xMjUgOC4zNDM4TDEwLjE1NjIgNS4zNDM4QzEwLjMxMjUgNS4xODc1IDEwLjUzMTIgNS4xODc1IDEwLjY1NjIgNS4zNDM4TDExLjQ2ODggNi4xNTYyQzExLjU5MzggNi4yODEyIDExLjU5MzggNi41IDExLjQ2ODggNi42MjVaIj48L3BhdGg+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    margin: 0 3px 0 5px !important;
+    vertical-align: middle !important;
+}
+.PostUser-name a[href="/u/return_second"]::after
+{
+    content:"轩辕重工" !important;
+    display: inline-block !important;
+    background:#ce1212 !important;
+    color:white !important;
+    font-size:0.8em !important;
+    padding:.25em .625em !important;
+    border-radius: 2px;
+    margin-left:5px !important;
+    min-width:10px;
+}
+.PostUser-name a[href="/u/hezeyu2013"]::after
+{
+    content:"程光军工" !important;
+    display: inline-block !important;
+    background:#E67E22 !important;
+    color:white !important;
+    font-size:0.8em !important;
+    padding:.25em .625em !important;
+    border-radius: 2px;
+    margin-left:5px !important;
+    min-width:10px;
+}
+.PostUser-name a[href="/u/Whr___114514"] .username::after
+{
+    content:"rp.万物爆零" !important;
+    display: inline-block !important;
+    background:#8e44ad !important;
+    color:white !important;
+    font-size:0.8em !important;
+    padding:.25em .625em !important;
+    border-radius: 2px;
+    margin-left:5px !important;
+    min-width:10px;
+}
+.PostUser-name a[href*='/u/Clare613']::after {
+  margin: 0 auto;
+  content: "eggy";
+  font-size: 90%;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-radius: 5px !important;
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(135deg, #fc4749, #fcce35, #4cc151, #1d90eb, #b81deb) !important;
+  white-space: nowrap;
+  margin-left: 3px;
+}
+.PostUser-name a[href="/u/7wny"] .username::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSIjNWViOTVlIiBzdHlsZT0ibWFyZ2luLWJvdHRvbTogLTNweDsiPjxwYXRoIGQ9Ik0xNiA4QzE2IDYuODQzNzUgMTUuMjUgNS44NDM3NSAxNC4xODc1IDUuNDM3NUMxNC42NTYyIDQuNDM3NSAxNC40Njg4IDMuMTg3NSAxMy42NTYyIDIuMzQzNzVDMTIuODEyNSAxLjUzMTI1IDExLjU2MjUgMS4zNDM3NSAxMC41NjI1IDEuODEyNUMxMC4xNTYyIDAuNzUgOS4xNTYyIDAgOCAwQzYuODEyNSAwIDUuODEyNSAwLjc1IDUuNDA2MjUgMS44MTI1QzQuNDA2MjUgMS4zNDM3NSAzLjE1NjI1IDEuNTMxMjUgMi4zNDM3NSAyLjM0Mzc1QzEuNSAzLjE4NzUgMS4zMTI1IDQuNDM3NSAxLjc4MTI1IDUuNDM3NUMwLjcxODc1IDUuODQzNzUgMCA2Ljg0Mzc1IDAgOEMwIDkuMTg3NSAwLjcxODc1IDEwLjE4NzUgMS43ODEyNSAxMC41OTM4QzEuMzEyNSAxMS41OTM4IDEuNSAxMi44NDM4IDIuMzQzNzUgMTMuNjU2MkMzLjE1NjI1IDE0LjUgNC40MDYyNSAxNC42ODc1IDUuNDA2MjUgMTQuMjE4OEM1LjgxMjUgMTUuMjgxMiA2LjgxMjUgMTYgOCAxNkM5LjE1NjI1IDE2IDEwLjE1NjIgMTUuMjgxMiAxMC41NjI1IDE0LjIxODhDMTEuNTkzOCAxNC42ODc1IDEyLjgxMjUgMTQuNSAxMy42NTYyIDEzLjY1NjJDMTQuNDY4OCAxMi44NDM4IDE0LjY1NjIgMTEuNTkzOCAxNC4xODc1IDEwLjU5MzhDMTUuMjUgMTAuMTg3NSAxNiA5LjE4NzUgMTYgOFpNMTEuNDY4OCA2LjYyNUw3LjM3NSAxMC42ODc1QzcuMjE4OCAxMC44NDM4IDcgMTAuODEyNSA2Ljg3NSAxMC42ODc1TDQuNSA4LjMxMjVDNC4zNzUgOC4xODc1IDQuMzc1IDcuOTY4OCA0LjUgNy44MTI1TDUuMzEyNSA3QzUuNDY4OCA2Ljg3NSA1LjY4NzUgNi44NzUgNS44MTI1IDcuMDMxMjVMNy4xMjUgOC4zNDM4TDEwLjE1NjIgNS4zNDM4QzEwLjMxMjUgNS4xODc1IDEwLjUzMTIgNS4xODc1IDEwLjY1NjIgNS4zNDM4TDExLjQ2ODggNi4xNTYyQzExLjU5MzggNi4yODEyIDExLjU5MzggNi41IDExLjQ2ODggNi42MjVaIj48L3BhdGg+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    margin: 0 3px 0 5px !important;
+    vertical-align: middle !important;
+}
+.PostUser-name a[href="/u/wpx"] .username::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSIjNWViOTVlIiBzdHlsZT0ibWFyZ2luLWJvdHRvbTogLTNweDsiPjxwYXRoIGQ9Ik0xNiA4QzE2IDYuODQzNzUgMTUuMjUgNS44NDM3NSAxNC4xODc1IDUuNDM3NUMxNC42NTYyIDQuNDM3NSAxNC40Njg4IDMuMTg3NSAxMy42NTYyIDIuMzQzNzVDMTIuODEyNSAxLjUzMTI1IDExLjU2MjUgMS4zNDM3NSAxMC41NjI1IDEuODEyNUMxMC4xNTYyIDAuNzUgOS4xNTYyIDAgOCAwQzYuODEyNSAwIDUuODEyNSAwLjc1IDUuNDA2MjUgMS44MTI1QzQuNDA2MjUgMS4zNDM3NSAzLjE1NjI1IDEuNTMxMjUgMi4zNDM3NSAyLjM0Mzc1QzEuNSAzLjE4NzUgMS4zMTI1IDQuNDM3NSAxLjc4MTI1IDUuNDM3NUMwLjcxODc1IDUuODQzNzUgMCA2Ljg0Mzc1IDAgOEMwIDkuMTg3NSAwLjcxODc1IDEwLjE4NzUgMS43ODEyNSAxMC41OTM4QzEuMzEyNSAxMS41OTM4IDEuNSAxMi44NDM4IDIuMzQzNzUgMTMuNjU2MkMzLjE1NjI1IDE0LjUgNC40MDYyNSAxNC42ODc1IDUuNDA2MjUgMTQuMjE4OEM1LjgxMjUgMTUuMjgxMiA2LjgxMjUgMTYgOCAxNkM5LjE1NjI1IDE2IDEwLjE1NjIgMTUuMjgxMiAxMC41NjI1IDE0LjIxODhDMTEuNTkzOCAxNC42ODc1IDEyLjgxMjUgMTQuNSAxMy42NTYyIDEzLjY1NjJDMTQuNDY4OCAxMi44NDM4IDE0LjY1NjIgMTEuNTkzOCAxNC4xODc1IDEwLjU5MzhDMTUuMjUgMTAuMTg3NSAxNiA5LjE4NzUgMTYgOFpNMTEuNDY4OCA2LjYyNUw3LjM3NSAxMC42ODc1QzcuMjE4OCAxMC44NDM4IDcgMTAuODEyNSA2Ljg3NSAxMC42ODc1TDQuNSA4LjMxMjVDNC4zNzUgOC4xODc1IDQuMzc1IDcuOTY4OCA0LjUgNy44MTI1TDUuMzEyNSA3QzUuNDY4OCA2Ljg3NSA1LjY4NzUgNi44NzUgNS44MTI1IDcuMDMxMjVMNy4xMjUgOC4zNDM4TDEwLjE1NjIgNS4zNDM4QzEwLjMxMjUgNS4xODc1IDEwLjUzMTIgNS4xODc1IDEwLjY1NjIgNS4zNDM4TDExLjQ2ODggNi4xNTYyQzExLjU5MzggNi4yODEyIDExLjU5MzggNi41IDExLjQ2ODggNi42MjVaIj48L3BhdGg+PC9zdmc+");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+    margin: 0 3px 0 5px !important;
+    vertical-align: middle !important;
+}
+
+.PostUser-name a[href="/u/_wjxmsl_"] .username::after
+{
+    content:"橄榄sl" !important;
+    display: inline-block !important;
+    background:#ffa500 !important;
+    color:white !important;
+    font-size:0.8em !important;
+    padding:.25em .625em !important;
+    border-radius: 2px;
+    margin-left:5px !important;
+    min-width:10px;
+}
+.PostUser-name a[href="/u/longyitongxue"] .username::after
+{
+    content:"不开longlong见祖宗" !important;
+    display: inline-block !important;
+    background:#ffa500 !important;
+    color:white !important;
+    font-size:0.8em !important;
+    padding:.25em .625em !important;
+    border-radius: 2px;
+    margin-left:5px !important;
+    min-width:10px;
+}
+ 
