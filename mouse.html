@@ -1,0 +1,152 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标美化效果</title>
+    <style>
+        /* 隐藏默认光标 */
+        body, a, a:hover, button, button:hover {
+            cursor: none !important; /* 提高优先级 */
+        }
+
+        /* 自定义光标样式 */
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #3498db 50%, transparent 70%); /* 蓝色渐变圆点 */
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%); /* 居中鼠标位置 */
+            transition: transform 0.1s ease, background 0.3s ease; /* 平滑过渡 */
+            z-index: 9999; /* 确保在最上层 */
+            opacity: 1; /* 确保可见 */
+        }
+
+        /* 悬停时的光标样式 */
+        .custom-cursor.hover {
+            transform: translate(-50%, -50%) scale(1.5); /* 放大 1.5 倍 */
+            background: radial-gradient(circle, #e74c3c 50%, transparent 70%); /* 红色渐变 */
+        }
+
+        /* 涟漪效果 */
+        .ripple {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid; /* 边框颜色由 JS 动态设置 */
+            pointer-events: none;
+            transform: translate(-50%, -50%); /* 居中对齐鼠标位置 */
+            animation: ripple-animate 1s ease-out forwards; /* 动画持续 1 秒 */
+            z-index: 9998; /* 低于光标但高于其他内容 */
+        }
+
+        /* 涟漪动画 */
+        @keyframes ripple-animate {
+            0% {
+                transform: translate(-50%, -50%) scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2.5) rotate(45deg); /* 放大并旋转 */
+                opacity: 0; /* 渐隐 */
+            }
+        }
+
+        /* 粒子效果 */
+        .particle {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: #ffffff; /* 初始白色，JS 设置颜色 */
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%); /* 居中对齐鼠标位置 */
+            animation: particle-animate 1s ease-out forwards; /* 动画持续 1 秒 */
+            z-index: 9997; /* 低于涟漪 */
+        }
+
+        /* 粒子动画 */
+        @keyframes particle-animate {
+            0% {
+                transform: translate(-50%, -50%);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))); /* 动态位移 */
+                opacity: 0; /* 渐隐 */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        // 创建光标元素
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
+
+        // 跟踪鼠标移动并检测悬停
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            // 检查鼠标是否在链接或按钮上
+            const target = e.target.closest('a, button');
+            if (target) {
+                cursor.classList.add('hover');
+            } else {
+                cursor.classList.remove('hover');
+            }
+        });
+
+        // 点击时生成涟漪和粒子
+        document.addEventListener('click', (e) => {
+            const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f1c40f', '#9b59b6'];
+            // 生成 2-3 个涟漪
+            const rippleCount = Math.floor(Math.random() * 2) + 2;
+            for (let i = 0; i < rippleCount; i++) {
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                ripple.style.left = e.clientX + 'px';
+                ripple.style.top = e.clientY + 'px';
+                const size = Math.floor(Math.random() * 40) + 40; // 40-80px
+                ripple.style.width = size + 'px';
+                ripple.style.height = size + 'px';
+                ripple.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
+                document.body.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 1000);
+            }
+            // 生成 5-8 个粒子
+            const particleCount = Math.floor(Math.random() * 4) + 5;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = e.clientX + 'px';
+                particle.style.top = e.clientY + 'px';
+                const size = Math.floor(Math.random() * 4) + 4; // 4-8px
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                const angle = Math.random() * 2 * Math.PI;
+                const distance = Math.random() * 50 + 20; // 20-70px
+                const dx = Math.cos(angle) * distance;
+                const dy = Math.sin(angle) * distance;
+                particle.style.setProperty('--dx', `${dx}px`);
+                particle.style.setProperty('--dy', `${dy}px`);
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 1000);
+            }
+        });
+    </script>
+</body>
+</html>
+
